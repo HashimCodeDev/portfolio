@@ -14,15 +14,18 @@ html{
 
 .container{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    gap: 230px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .navbar{
     display: flex;
     position: absolute;
     height: 5vh;
-    width: 100vw;
     left: 55%;
     padding: 30px;
     gap: 50px;
@@ -75,10 +78,10 @@ html{
     display: flex;
     position: relative;
     justify-content: center;
-    height: 50vh;
+    height: 400px;
     width: 50vw;
     padding: 10px;
-    top: 20%;
+    top: 150px;
     left: 25%;
     text-align: center;
     align-items: center;
@@ -137,4 +140,68 @@ html{
 .social img{
     height: 2rem;
     cursor: pointer;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:1200px) {
+    .container{
+        width: 100vw;
+        height: 300vh;
+        gap: 100vh;
+    }
+
+    .profile{
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        gap: 200px;
+        padding: 10px;
+    }
+
+    .profileimg{
+        height: 100vh;
+        top: 20%;
+    }
+
+    .profileimg img{
+        height: 500px;
+        width: 50px;
+    }
+
+    .profiletext{
+        font-size: 80px;
+        align-items: center;
+    }
+
+    .profiletext h1{
+        font-size: 60px;
+    }
+
+    .name{
+        width: 100vw;
+    }
+
+    .name span{
+        font-size: 200px;
+    }
+
+    .navbar a{
+        font-size: 50px;
+    }
+
+    .social{
+        height: auto;
+        width: auto;
+        gap: 70px;
+    }
+
+    .social img{
+        height: 50px;
+    }
 }

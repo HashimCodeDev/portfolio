@@ -1,6 +1,7 @@
 import React from 'react';
 import './app.css';
 import Profile from './sections/profile';
+import About from './sections/about';
 
 const App = () => {
   const navItems = [
@@ -22,7 +23,12 @@ const App = () => {
           </a>
         ))}
       </nav>
-      <Profile />
+      <div>
+        <Profile />
+      </div>
+      <div>
+        <About />
+      </div>
     </div>
   );
 };
