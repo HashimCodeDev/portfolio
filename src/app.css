@@ -1,0 +1,140 @@
+:root{
+    --black:black;
+    --dark-grey: #222831;
+    --grey:#393E46;
+    --blue: #00ADB5;
+    --white: #EEEEEE;
+    --code-family: "IBM Plex Mono", monospace;
+    --font-family: "DM Sans", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    position: absolute;
+    height: 5vh;
+    width: 100vw;
+    left: 55%;
+    padding: 30px;
+    gap: 50px;
+    z-index: 5;
+}
+
+.navbar a{
+    cursor: pointer;
+    color: var(--background-color);
+    font-family: var(--font-family); 
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover{
+    text-decoration: black;
+    color: var(--dark-grey);
+}
+
+.nav-item {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none; /* Removes the default underline */
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: #00bcd4;
+  }
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-grey);
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  
+
+.profile {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 50vh;
+    width: 50vw;
+    padding: 10px;
+    top: 20%;
+    left: 25%;
+    text-align: center;
+    align-items: center;
+}
+
+.profileimg{
+    width: auto;
+    height: 70vh;
+    object-fit: contain;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 30px;
+}
+
+.profiletext{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.profile span {
+    display: inline-block; /* Helps the flip work correctly */
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    left: 40%;
+    animation: flip 2s infinite; /* Adjusted for smoother effect */
+    animation-delay: calc(0.2s * var(--i));
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+}
+
+.profile h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes flip {
+    0%, 80% {
+        transform: rotateY(360deg);
+    }
+}
+
+.social{
+    display: flex;
+    padding: 30px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    right: 20px;
+    gap: 25px;
+}
+
+.social img{
+    height: 2rem;
+    cursor: pointer;
+}
