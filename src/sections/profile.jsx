@@ -20,6 +20,11 @@ const Profile = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const profileImg = new Image();
+    profileImg.src = 'profile.png'; // Preloading the profile image
+  }, []);
+
   return (
     <section
       id='profile'
