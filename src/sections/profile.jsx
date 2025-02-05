@@ -64,6 +64,7 @@ const Profile = () => {
             target='_blank'
             rel='noopener noreferrer'>
             <img
+              className='linkedin'
               src='linkedin.svg'
               alt='LinkedIn'
             />

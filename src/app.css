@@ -139,6 +139,7 @@ html{
 
 .social img{
     height: 2rem;
+    size: 50px;
     cursor: pointer;
 }
 
