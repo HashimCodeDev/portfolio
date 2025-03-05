@@ -1,0 +1,30 @@
+body {
+	overflow: hidden;
+}
+
+.terminal-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-self: center;
+	justify-content: center;
+}
+
+.terminal {
+	position: relative;
+	width: 60vw;
+	height: 80vh;
+	justify-self: center;
+	align-self: center;
+}
+
+.react-terminal {
+	overflow: hidden;
+}
+
+.editor {
+	overflow: hidden;
+}
