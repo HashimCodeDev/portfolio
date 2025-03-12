@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.30424d2d.css",
-    "main.js": "./static/js/main.97254a93.js",
+    "main.css": "./static/css/main.750fea87.css",
+    "main.js": "./static/js/main.b9619293.js",
+    "static/media/LunarEscape.otf": "./static/media/LunarEscape.f9d1218b8a645c33865a.otf",
     "index.html": "./index.html",
-    "main.30424d2d.css.map": "./static/css/main.30424d2d.css.map",
-    "main.97254a93.js.map": "./static/js/main.97254a93.js.map"
+    "main.750fea87.css.map": "./static/css/main.750fea87.css.map",
+    "main.b9619293.js.map": "./static/js/main.b9619293.js.map"
   },
   "entrypoints": [
-    "static/css/main.30424d2d.css",
-    "static/js/main.97254a93.js"
+    "static/css/main.750fea87.css",
+    "static/js/main.b9619293.js"
   ]
 }

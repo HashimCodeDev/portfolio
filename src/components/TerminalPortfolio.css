@@ -17,8 +17,15 @@ body {
 	position: relative;
 	width: 60vw;
 	height: 80vh;
-	justify-self: center;
+	top: 12%;
 	align-self: center;
+}
+
+@media (max-width: 768px) {
+	.terminal {
+		height: 30vh !important;
+		width: 80vw !important;
+	}
 }
 
 .react-terminal {
