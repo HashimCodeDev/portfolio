@@ -17,8 +17,42 @@ const TerminalWrapper = styled.div`
 const TerminalPortfolio = () => {
 	const commands = {
 		whoami: "I am Hashim Mohamed, a Full-Stack Developer.",
-		projects: "Check out my GitHub: https://github.com/hashim-javaDev",
-		help: "Available commands: whoami, projects, help",
+		contact: (
+			<span>
+				Check out my LinkTree:{" "}
+				<a
+					href="https://bento.me/hashimmohamedta"
+					target="_blank"
+					rel="noopener noreferrer"
+					style={{ color: "cyan", textDecoration: "none" }}
+				>
+					Connect With Me
+				</a>
+			</span>
+		),
+		skills: (
+			<span>
+				🚀 Technical Skills: - Java, Python, JavaScript - React.js, Next.js,
+				Tailwind CSS - Express.js, Node.js, Spring Boot - MySQL, PostgreSQL,
+				Firebase - Docker, AI/ML (Learning)<br></br>
+				<br></br> 🛠️ Soft Skills: - Communication, Collaboration - Critical
+				Thinking, Problem-Solving
+			</span>
+		),
+		projects: (
+			<span>
+				These are my projects:{" "}
+				<a
+					href="https://github.com/HashimCodeDev?tab=repositories"
+					target="_blank"
+					rel="noopener noreferrer"
+					style={{ color: "cyan", textDecoration: "none" }}
+				>
+					Projects
+				</a>
+			</span>
+		),
+		help: "Available commands: whoami, projects, contact",
 	};
 
 	return (
@@ -29,15 +63,17 @@ const TerminalPortfolio = () => {
 						className="react-terminal"
 						showControlBar={false}
 						prompt="hashim@portfolio:~$"
+						welcomeMessage={
+							<>
+								<span>
+									Hello! Welcome to my portfolio terminal.<br></br>
+									<br></br>
+									Type 'help' to see available commands.
+									<br></br>
+								</span>
+							</>
+						}
 						commands={commands}
-						// themes={{
-						// 	"my-custom-theme": {
-						// 		themeBGColor: "#272B36",
-						// 		themeToolbarColor: "#DBDBDB",
-						// 		themeColor: "#FFFEFC",
-						// 		themePromptColor: "#a917a8",
-						// 	},
-						// }}
 						theme="material-dark"
 					/>
 				</TerminalWrapper>

@@ -6,14 +6,7 @@
 }
 
 .index_terminal__teubZ {
-	height: 60vh !important;
-}
-
-@media (max-width: 768px) {
-	.index_terminal__teubZ {
-		height: 30vh !important;
-		width: 80vw !important;
-	}
+	height: 450px !important;
 }
 
 .index_editor__JoDSg {
@@ -77,4 +70,11 @@ canvas {
 	color: white;
 	font-family: "MyCustomFont", sans-serif;
 	color: #42a5f5;
+}
+
+@media (max-width: 768px) {
+	.index_terminal__teubZ {
+		height: 750px !important;
+		width: 80vw !important;
+	}
 }
