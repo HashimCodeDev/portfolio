@@ -27,13 +27,60 @@ const projects = [
 	{ name: "Snake Game", url: "https://github.com/HashimCodeDev/SnakeGame" },
 ];
 
+const contacts = [
+	{ name: "Email", url: "mailto:hashimmohammed212@gmail.com" },
+	{ name: "LinkedIn", url: "https://linkedin.com/in/hashimmohamedta" },
+	{ name: "GitHub", url: "https://github.com/HashimCodeDev" },
+	{ name: "TinkerHub", url: "https://tinkerhub.org/@hashimdev" },
+	{ name: "Instagram", url: "https://instagram.com/ha._shim_" },
+];
+
 const linkStyle = {
 	color: "cyan",
 	textDecoration: "none",
 	marginRight: "10px", // Adds spacing between links
 };
 
-const directories = ["Skills", "Projects"];
+const directories = ["Skills", "Projects", "Contact"];
+const files = ["Resume.pdf", "About.txt"];
+
+const About = () => {
+	return (
+		<span>
+			👋 Hey! I'm Hashim Mohamed T.A.
+			<br />
+			🚀 Full-Stack Developer | Ethical Hacking Enthusiast
+			<br />
+			📍 B.Tech CSE Student @ Model Engineering College, Thrikkakara
+			<br />
+			🎯 Backend-Focused | Loves AI/ML & Problem Solving
+		</span>
+	);
+};
+
+const Contact = () => {
+	return (
+		<div
+			style={{
+				display: "flex",
+				flexWrap: "wrap",
+				gap: "10px",
+			}}
+		>
+			{contacts.map((contact, index) => (
+				<a
+					key={index}
+					href={contact.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					style={linkStyle}
+				>
+					{contact.name}
+				</a>
+			))}
+		</div>
+	);
+};
 
 const Projects = () => {
 	return (
@@ -90,17 +137,7 @@ const TerminalPortfolio = () => {
 	//let promptMessage = "hashim@portfolio:~$";
 	const [promptMessage, setPromptMessage] = useState("hashim@portfolio:~$");
 	const commands = {
-		whoami: (
-			<span>
-				👋 Hey! I'm Hashim Mohamed T.A.
-				<br />
-				🚀 Full-Stack Developer | Ethical Hacking Enthusiast
-				<br />
-				📍 B.Tech CSE Student @ Model Engineering College, Thrikkakara
-				<br />
-				🎯 Backend-Focused | Loves AI/ML & Problem Solving
-			</span>
-		),
+		whoami: <About />,
 		contact: (
 			<span>
 				Check out my LinkTree:{" "}
@@ -134,6 +171,8 @@ const TerminalPortfolio = () => {
 				<br />
 				- ls → List all files and directories
 				<br />
+				- cat → View the contents of a file
+				<br />
 				- whoami → Know about me
 				<br />
 				- contact → Connect with me
@@ -163,35 +202,77 @@ const TerminalPortfolio = () => {
 					setPromptMessage((prev) => prev.slice(0, -1));
 				}
 			} else {
-				if (directory in directories) {
-					setPromptMessage((prev) => prev.slice(0, -1) + "/" + directory);
+				if (directories.includes(directory)) {
+					setPromptMessage((prev) => prev.slice(0, -1) + "/" + directory + "$");
 				} else {
 					return <span>No Such Directory!</span>;
 				}
+			}
+		},
+		cat: (file) => {
+			if (files.includes(file)) {
+				if (file === "Resume.pdf") {
+					window.open("/resume.pdf", "_blank");
+				} else if (file === "About.txt") {
+					return <About />;
+				}
+			} else {
+				return <span>No Such File!</span>;
 			}
 		},
 		ls: (directory) => {
 			switch (directory) {
 				case "Projects":
 					return <Projects />;
+				case "Skills":
+					return <Skills />;
+				case "Contact":
+					return <Contact />;
 				case "":
 					switch (promptMessage) {
-						case "hashim@portfolio:~/Projects":
+						case "hashim@portfolio:~/Projects$":
 							return <Projects />;
-						default:
+						case "hashim@portfolio:~/Skills$":
+							return <Skills />;
+						case "hashim@portfolio:~/Contact$":
+							return <Contact />;
+						case "hashim@portfolio:~$":
 							return (
 								<>
-									<span style={{ color: "cyan" }}>Projects </span>
-									<a
-										href="/resume.pdf"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "red", textDecoration: "none" }}
+									{/* Loop through and display directories */}
+									<div
+										style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
 									>
-										Resume.pdf
-									</a>
+										{directories.map((directory, index) => (
+											<span key={index} style={{ color: "cyan" }}>
+												{directory}
+												{/* Adding space between each directory */}
+											</span>
+										))}
+
+										{/* Loop through and display files */}
+										{files.map((file, index) =>
+											file.toLowerCase().endsWith(".pdf") ? (
+												<a
+													key={index}
+													href={`/${file}`} // Assuming file is in public directory
+													target="_blank"
+													rel="noopener noreferrer"
+													style={{ color: "red", textDecoration: "none" }}
+												>
+													{file}
+												</a>
+											) : (
+												<span key={index} style={{ color: "red" }}>
+													{file} &nbsp;
+												</span>
+											)
+										)}
+									</div>
 								</>
 							);
+						default:
+							return;
 					}
 				default:
 					return <span>No Such Directory!</span>;
