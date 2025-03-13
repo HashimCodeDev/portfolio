@@ -16,7 +16,17 @@ const TerminalWrapper = styled.div`
 
 const TerminalPortfolio = () => {
 	const commands = {
-		whoami: "I am Hashim Mohamed, a Full-Stack Developer.",
+		whoami: (
+			<span>
+				👋 Hey! I'm Hashim Mohamed T.A.
+				<br />
+				🚀 Full-Stack Developer | Ethical Hacking Enthusiast
+				<br />
+				📍 B.Tech CSE Student @ Model Engineering College, Thrikkakara
+				<br />
+				🎯 Backend-Focused | Loves AI/ML & Problem Solving
+			</span>
+		),
 		contact: (
 			<span>
 				Check out my LinkTree:{" "}
@@ -32,11 +42,25 @@ const TerminalPortfolio = () => {
 		),
 		skills: (
 			<span>
-				🚀 Technical Skills: - Java, Python, JavaScript - React.js, Next.js,
-				Tailwind CSS - Express.js, Node.js, Spring Boot - MySQL, PostgreSQL,
-				Firebase - Docker, AI/ML (Learning)<br></br>
-				<br></br> 🛠️ Soft Skills: - Communication, Collaboration - Critical
-				Thinking, Problem-Solving
+				🚀 Technical Skills:
+				<br />
+				- Java, Python, JavaScript
+				<br />
+				- React.js, Next.js, Tailwind CSS
+				<br />
+				- Express.js, Node.js, Spring Boot
+				<br />
+				- MySQL, PostgreSQL, Firebase
+				<br />
+				- Docker, AI/ML (Learning)
+				<br />
+				<br />
+				🛠️ Soft Skills:
+				<br />
+				- Communication, Collaboration
+				<br />
+				- Critical Thinking, Problem-Solving
+				<br />
 			</span>
 		),
 		projects: (
@@ -52,7 +76,22 @@ const TerminalPortfolio = () => {
 				</a>
 			</span>
 		),
-		help: "Available commands: whoami, projects, contact",
+		help: (
+			<span>
+				Available commands:
+				<br />
+				- whoami → Know about me
+				<br />
+				- contact → Connect with me
+				<br />
+				- projects → See my GitHub
+				<br />
+				- skills → Check my skills
+				<br />
+				- clear → Clear terminal
+				<br />
+			</span>
+		),
 	};
 
 	return (
