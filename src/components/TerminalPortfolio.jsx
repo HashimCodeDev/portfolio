@@ -152,19 +152,7 @@ const TerminalPortfolio = () => {
 			</span>
 		),
 		skills: <Skills />,
-		projects: (
-			<span>
-				These are my projects:{" "}
-				<a
-					href="https://github.com/HashimCodeDev?tab=repositories"
-					target="_blank"
-					rel="noopener noreferrer"
-					style={{ color: "cyan", textDecoration: "none" }}
-				>
-					Projects
-				</a>
-			</span>
-		),
+		projects: <Projects />,
 		help: (
 			<span>
 				Available commands:

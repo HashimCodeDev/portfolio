@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.d8c79eeb.css",
-    "main.js": "./static/js/main.d900dcfb.js",
+    "main.js": "./static/js/main.0d1a6569.js",
     "static/media/LunarEscape.otf": "./static/media/LunarEscape.f9d1218b8a645c33865a.otf",
     "index.html": "./index.html",
     "main.d8c79eeb.css.map": "./static/css/main.d8c79eeb.css.map",
-    "main.d900dcfb.js.map": "./static/js/main.d900dcfb.js.map"
+    "main.0d1a6569.js.map": "./static/js/main.0d1a6569.js.map"
   },
   "entrypoints": [
     "static/css/main.d8c79eeb.css",
-    "static/js/main.d900dcfb.js"
+    "static/js/main.0d1a6569.js"
   ]
 }
